@@ -1,0 +1,13 @@
+.context-menu {    position: absolute;  z-index: 999999999;  padding: 0px 0;  width: 150px; margin-top:-50px; background-color: #fff;  border: solid 1px #dfdfdf;  box-shadow: 1px 1px 2px #cfcfcf; cursor:pointer; }
+.context-menu--active {  display: block;  }
+
+.context-menu__items { list-style: none;  margin: 0;  padding: 0;  }
+.context-menu__item { display: block;  margin-bottom: 4px;  }
+.context-menu__item:last-child {  margin-bottom: 0;  }
+.context-menu__link {      display: block;     padding: 2px 3px;    color: #57a594;    text-decoration: none;     border-bottom: 1px solid #f2f2f2; }
+.context-menu__link:hover {  color: #fff;  background-color: #57a594;;  }
+.context-menu__items ul {  position: absolute;  white-space: nowrap;  z-index: 1;  left: -99999em;}
+.context-menu__items > li:hover > ul {  left: auto;  padding-top: 5px  ;  min-width: 100%;  }
+.context-menu__items > li li ul {  border-left:1px solid #fff;}
+.context-menu__items > li li:hover > ul {  left: 100%;  top: -1px;  }
+.context-menu__item ul { background-color: #ffffff; padding: 7px 11px;  list-style-type: none;  text-decoration: none; margin-left: 40px; }
