@@ -30,8 +30,8 @@
   	  $('.contextmenu').remove();
       var lists = {
         lists:  [
-        			{names : 'edit', icon: 'pencil', serves: false, html_attributes: ''}, 
-        			{names : 'delete', icon: 'trash', serves: 'toNothing', html_attributes: '' }
+        			{name : 'edit', icon: 'pencil', onClickFunc: false, html_attributes: ''}, 
+        			{name : 'delete', icon: 'trash', onClickFunc: 'toNothing', html_attributes: '' }
         		]};
 
       var settings  = $.extend(lists, options);
@@ -46,8 +46,8 @@
         
           
       items.forEach(function(item) { 
-          var li = $('<li class="context-menu__item" '+item.html_attributes+' ><div class="context-menu__link" ><i class="fa fa-'+item.icon+' margin5"></i>'+item.names+'</div></li>');
-          var fuction = item.serves;
+          var li = $('<li class="context-menu__item" '+item.html_attributes+' ><div class="context-menu__link" ><i class="fa fa-'+item.icon+' margin5"></i>'+item.name+'</div></li>');
+          var fuction = item.onClickFunc;
 
           if (typeof fuction !== 'undefined') { 
               li.attr('onClick',''+fuction.toString()+'(this)');
